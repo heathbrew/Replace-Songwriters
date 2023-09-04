@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Generation - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div width="10%" class="logo">
+            <img style="width: 10%; height:5%;" src = "https://img.freepik.com/free-vector/music-background-vector-girl-listens-music-cartoon-illustration-isolated-white_460848-16486.jpg?w=996&t=st=1687282987~exp=1687283587~hmac=08cc69d3f2253d376f9bfc7a6d3fa5882989e4c4655c7cb772b27da2ddcc0d0c" alt="Chat Bot Logo">
+            <a text-align="left" style="color:#000000;font-size:40px;" href="#">MUSIC AI</a>
+        </div> 
+    <ul>
+        <li class="active"><a text-align="right" style="color:#000000;" href="dashboard">Dashboard</a></li>
+    </ul>
+    <ul>
+        <li class="active"><a text-align="right" style="color:#000000;" href="MUSIC_TUNES">Tune Generation</a></li>
+    </ul>
+    </nav>
+</header> 
+    <h1>Generated Merged Text</h1>
+    <div class="generated-section">
+    <pre>{{ generated_text }}</pre>
+    </div>
+    <h1>Markov Music</h1>
+    <form action="{{ url_for('generate_markov') }}" method="get">
+        <input type="hidden" name="generated_text" value="{{ generated_text }}">
+        <button class="center-button" type="submit">Generate Markov</button>
+    </form>
+    <div class="generated-section"></div>
+    <pre>{{ new_lyrics }}</pre>
+    </div>
+    <br>       
+    <br>
+    <form action="{{ url_for('regenerate_song') }}" method="get">
+            <input type="hidden" name="generated_text" value="{{ generated_text }}">
+            <input type="hidden" name="new_lyrics" value="{{ new_lyrics }}">
+            <input type="hidden" name="generated_song" value="{{ generated_song }}">
+            <br>
+            <label for="verse_length"><h3>Verse Length: (5 - 10)</h3></label>
+            <div class="range-container">
+                <input type="range" name="verse_length" id="verse_length" min="5" max="10" step="1" value="5" onchange="showValue(this.value, 'verseLengthValue', 'verseLengthMin', 'verseLengthMax')">
+                <span id="verseLengthValue">5</span>
+            </div>
+
+            <label for="chorus_length"><h3>Chorus Length: (4 - 9)</h3></label>
+            <div class="range-container">
+                <input type="range" name="chorus_length" id="chorus_length" min="4" max="9" step="1" value="5" onchange="showValue(this.value, 'chorusLengthValue', 'chorusLengthMin', 'chorusLengthMax')">
+                <span id="chorusLengthValue">5</span>
+            </div>
+
+            <label for="bridge_length"><h3>Bridge Length: (0 - 5)</h3></label>
+            <div class="range-container">
+                <input type="range" name="bridge_length" id="bridge_length" min="0" max="5" step="1" value="5" onchange="showValue(this.value, 'bridgeLengthValue', 'bridgeLengthMin', 'bridgeLengthMax')">
+                <span id="bridgeLengthValue">5</span>
+            </div>
+
+            <label for="rhyme_scheme"><h3>Rhyme Scheme:</h3></label>
+            <input type="text" name="rhyme_scheme" id="rhyme_scheme" required>
+            <br>
+            <button class="center-button" type="submit">Regenerate Song</button>
+    </form>
+    <h1>Song Generation - Result</h1>
+    {% if generated_song %}
+        <pre>{{ generated_song }}</pre>
+    {% else %}
+        <p>No song generated yet.</p>
+    {% endif %}
+    <br>
+    <form action="{{ url_for('Song_chatbot') }}" method="post">
+        <input type="hidden" name="generated_text" value="{{ generated_text }}">
+        <input type="hidden" name="new_lyrics" value="{{ new_lyrics }}">
+        <input type="hidden" name="generated_song" value="{{ generated_song }}">
+        <br>
+          <label for="artist">Artist:</label>
+          <select name="artist" id="artist" required>
+              <option value="" disabled selected>Select an artist</option>
+              <option value="Ariana Grande">Ariana Grande</option>
+              <option value="Beyoncé">Beyoncé</option>
+              <option value="Billie Eilish">Billie Eilish</option>
+              <option value="BTS (방탄소년단)">BTS (방탄소년단)</option>
+              <option value="Cardi B">Cardi B</option>
+              <option value="Charlie Puth">Charlie Puth</option>
+              <option value="Coldplay">Coldplay</option>
+              <option value="Drake">Drake</option>
+              <option value="Dua Lipa">Dua Lipa</option>
+              <option value="Ed Sheeran">Ed Sheeran</option>
+              <option value="Eminem">Eminem</option>
+              <option value="Justin Bieber">Justin Bieber</option>            
+              <option value="Katy Perry">Katy Perry</option>
+              <option value="Khalid">Khalid</option>
+              <option value="Lady Gaga">Lady Gaga</option>
+              <option value="Maroon 5">Maroon 5</option>
+              <option value="Nicki Minaj">Nicki Minaj</option>
+              <option value="Post Malone">Post Malone</option>
+              <option value="Rihanna">Rihanna</option>
+              <option value="Selena Gomez">Selena Gomez</option>         
+              <option value="Taylor Swift">Taylor Swift</option>
+          </select>
+          <br>
+          <br>
+  
+          <label for="genre">Genre:</label>
+          <select name="genre" id="genre" required>
+              <option value="" disabled selected>Select a genre</option>
+              <option value="Pop Country">Pop Country</option>
+              <option value="Alternative Indie">Alternative Indie</option>
+              <option value="KPop">KPop</option>
+              <option value="Pop">Pop</option>
+              <option value="Pop Rock">Pop Rock</option>
+              <option value="R&B Pop">R&B Pop</option>
+              <option value="Hip Hop">Hip Hop</option>
+          </select>
+        <br>
+        <label for="rhyme_scheme"><h3>Rhyme Scheme:</h3></label>
+        <input type="text" name="rhyme_scheme" id="rhyme_scheme" required>
+
+        <button class="center-button" type="submit">Generate Final Lyrics</button>
+    </form>
+    <h1>Song Generation - Result</h1>
+    {% if generated_lyrics %}
+        <pre>{{ generated_lyrics }}</pre>
+    {% else %}
+        <p>No Lyrics generated yet.</p>
+    {% endif %}
+    <script>
+        function showValue(value, valueElementId, minElementId, maxElementId) {
+            document.getElementById(valueElementId).textContent = +value;
+            document.getElementById(minElementId).textContent = document.getElementById(valueElementId).min;
+            document.getElementById(maxElementId).textContent = document.getElementById(valueElementId).max;
+        }
+    </script>
+</body>
+</html>

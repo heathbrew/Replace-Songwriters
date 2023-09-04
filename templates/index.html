@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Lyrics Generator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Song Lyrics Generator</h1>
+        <form method="post">
+            <label for="rhymescheme">Rhyme Scheme:</label>
+            <input type="text" name="rhymescheme" required><br>
+
+            <label for="artist">Artist:</label>
+            <input type="text" name="artist" required><br>
+
+            <label for="genre">Genre:</label>
+            <input type="text" name="genre" required><br>
+
+            <label for="seedtext">Seed Text:</label>
+            <textarea name="seedtext" rows="4" required></textarea><br>
+
+            <input type="submit" value="Generate Lyrics">
+        </form>
+
+        {% if generated_lyrics %}
+        <div class="generated-lyrics">
+            <h2>Generated Lyrics:</h2>
+            <p>{{ generated_lyrics }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

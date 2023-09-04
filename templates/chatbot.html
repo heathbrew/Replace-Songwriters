@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Lyrics Generator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Generation - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<body>   
+    <h1>Generated Merged Text</h1>
+    <pre>{{ generated_text }}</pre>
+    <h1>Markov Music</h1>
+    <form action="{{ url_for('generate_markov') }}" method="get">
+        <input type="hidden" name="generated_text" value="{{ generated_text }}">
+        <button class="center-button" type="submit">Generate Markov</button>
+    </form>
+    <pre>{{ new_lyrics }}</pre>
+    <br>
+          
+    <br>
+    <form action="{{ url_for('regenerate_song') }}" method="get">
+            <input type="hidden" name="generated_text" value="{{ generated_text }}">
+            <input type="hidden" name="new_lyrics" value="{{ new_lyrics }}">
+            <input type="hidden" name="generated_song" value="{{ generated_song }}">
+            <br>
+            <label for="verse_length"><h3>Verse Length: (5 - 10)</h3></label>
+            <div class="range-container">
+                <input type="range" name="verse_length" id="verse_length" min="5" max="10" step="1" value="5" onchange="showValue(this.value, 'verseLengthValue', 'verseLengthMin', 'verseLengthMax')">
+                <span id="verseLengthValue">5</span>
+            </div>
+
+            <label for="chorus_length"><h3>Chorus Length: (4 - 9)</h3></label>
+            <div class="range-container">
+                <input type="range" name="chorus_length" id="chorus_length" min="4" max="9" step="1" value="5" onchange="showValue(this.value, 'chorusLengthValue', 'chorusLengthMin', 'chorusLengthMax')">
+                <span id="chorusLengthValue">5</span>
+            </div>
+
+            <label for="bridge_length"><h3>Bridge Length: (0 - 5)</h3></label>
+            <div class="range-container">
+                <input type="range" name="bridge_length" id="bridge_length" min="0" max="5" step="1" value="5" onchange="showValue(this.value, 'bridgeLengthValue', 'bridgeLengthMin', 'bridgeLengthMax')">
+                <span id="bridgeLengthValue">5</span>
+            </div>
+
+            <label for="rhyme_scheme"><h3>Rhyme Scheme:</h3></label>
+            <input type="text" name="rhyme_scheme" id="rhyme_scheme" required>
+
+            <button class="center-button" type="submit">Regenerate Song</button>
+    </form>
+    <h1>Song Generation - Result</h1>
+    {% if generated_song %}
+        <pre>{{ generated_song }}</pre>
+    {% else %}
+        <p>No song generated yet.</p>
+    {% endif %}
+    <script>
+        function showValue(value, valueElementId, minElementId, maxElementId) {
+            document.getElementById(valueElementId).textContent = +value;
+            document.getElementById(minElementId).textContent = document.getElementById(valueElementId).min;
+            document.getElementById(maxElementId).textContent = document.getElementById(valueElementId).max;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MUSIC_AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo">
+          <img src="https://img.freepik.com/premium-vector/musical-logo-treble-clef-guitar-logo-illustration-concept-classical-music_691771-98.jpg?w=826" alt="">
+          <span class="nav-item"><button id="toggleButton">MUSIC AI</button></span>
+        </a></li>
+        <li><a href="#">
+          <i class="fas fa-home"></i>
+          <span class="nav-item">Home</span>
+        </a></li>
+        <li><a href="">
+          <i class="fas fa-user"></i>
+          <span class="nav-item">Profile</span>
+        </a></li>
+        <li><a href="">
+          <i class="fas fa-cog"></i>
+          <span class="nav-item">Pricing</span>
+        </a></li>
+        <li><a href="">
+          <i class="fas fa-question-circle"></i>
+          <span class="nav-item">Contact Us</span>
+        </a></li>
+        <li><a href="" class="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Log out</span>
+        </a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <section class="main-course">
+        <style>
+          .box {
+            display: flex;
+            align-items: right;
+          }
+      
+          .logo-img {
+            max-width: 10%;
+            max-height: 10%;
+          }
+        </style>
+        <h1>_My Options</h1>
+        <div class="course-box">
+          <div class="course">
+            <div class="box">
+              <h3>Song Generation</h3>
+              <a href="Song"><button>Visit</button></a>
+              <img src="https://www.shutterstock.com/shutterstock/photos/597476753/display_1500/stock-vector-song-music-generation-logo-icon-vector-597476753.jpg" alt="Logo" class="logo-img">
+            </div>
+            <div class="box">
+              <h3>Tune Generation</h3>
+              <a href="MUSIC_TUNES"><button>Visit</button></a>
+              <img src="https://img.lovepik.com/free-png/20210927/lovepik-piano-music-symbol-png-image_401568052_wh1200.png" alt="Logo" class="logo-img">
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+  <script>
+    var button = document.getElementById("toggleButton");
+    var content = document.querySelector("body");
+    var isContentVisible = true;
+
+    button.addEventListener("click", function() {
+      isContentVisible = !isContentVisible;
+
+      if (isContentVisible) {
+        content.classList.remove("hidden");
+      } else {
+        content.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+</html>

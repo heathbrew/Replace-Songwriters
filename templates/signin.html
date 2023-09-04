@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign In{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Signin</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+{% if error %}
+	<p class="error">{{ error }}</p>
+{% endif %}
+<div class="container">
+<div class="signin">
+	<form method="post">
+		<h1>Login</h1>
+			<hr>
+			<p>Explore the Music with AI!</p>
+			<label for="username">Username:</label>
+		    <input type="text" name="username" placeholder="abc@example" id="username" required>
+			<label for="password">Password:</label>
+			<input type="password" name="password" placeholder="enter your password!" id="password" required>
+			<button>Sign In</button>
+			<p>
+				<a href="#">Forgot Password?</a>
+			</p>
+			<closeform></closeform></form>
+    </div>
+	<div class="pic">
+		<img src="https://cdn.pixabay.com/photo/2016/09/08/21/09/piano-1655558_1280.jpg">
+	</div>
+</div>
+
+	<script>
+		function showSignin() {
+		  const signin = document.createElement('iframe');
+		  signin.src = 'signin.html';
+		  document.body.appendChild(signin);
+		}
+	  </script>
+</body>
+{% endblock %}
