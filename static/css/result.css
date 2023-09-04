@@ -1,0 +1,128 @@
+/* Add borders and arrange generated sections vertically */
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  padding: 1rem;
+}
+
+.navbar {
+  background-color: #cec2c2;
+  overflow: hidden;
+}
+
+.navbar ul {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  float: right;
+}
+
+.navbar li a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover:not(.active) {
+  background-color: #b47d7d;
+}
+
+.navbar li:hover:not(.active) {
+  background-color: #b47d7d;
+}
+
+pre {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  border: 1px solid #ccc; /* Add border */
+  margin-top: 20px; /* Add margin */
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+form {
+  text-align: left;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.range-container {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.center-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Add borders to generated sections */
+.generated-section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}

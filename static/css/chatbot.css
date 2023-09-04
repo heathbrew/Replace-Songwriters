@@ -1,0 +1,96 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background color and font styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signin {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.signin h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.signin hr {
+    margin: 10px 0;
+}
+
+.signin p {
+    margin-bottom: 20px;
+}
+
+.signin label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signin input[type="text"],
+.signin input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.signin input[type="text"]:focus,
+.signin input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+.signin button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.signin button:hover {
+    background-color: #0056b3;
+}
+
+.signin a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.pic {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
