@@ -40,7 +40,7 @@ CreativeSongCraft is an AI-powered web app that offers users the ability to crea
 
 
 ## Organization
-[WowDAO AI](https://wowdao.ai/)
+[WowDAO.AI](https://wowdao.ai/)
 
 ## Team
 A team of 5 talented individuals collaborated on this project.
