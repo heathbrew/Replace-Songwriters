@@ -23,6 +23,22 @@ CreativeSongCraft is an AI-powered web app that offers users the ability to crea
 - Sheet Music Generation: LilyPond Library
 - Web Development: HTML, CSS, JavaScript
 
+## Screenshots
+![1](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/609ef1a4-8d0c-4a28-814c-0e4a29cf16a1)
+![2](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/a58270dc-10be-45dd-9e22-36dcc0f5dddb)
+![3](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/1b9f0496-a1cd-4bc5-984b-cf0d4cd1af52)
+![4](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/8a336404-45c5-45d8-b1fa-76addcbf210c)
+![5](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/b04fd87f-046e-435b-9c16-417d1094a8fc)
+![6](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/4f37cf17-e93a-4506-bcd4-e19a996646bb)
+![7](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/37508fe6-26e3-4596-8757-d2aea6e9befc)
+![8](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/1cae27b4-3bf7-427d-8b77-8745dfe27ee5)
+![9](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/0fccfcd2-d052-4b90-b475-ce6a6b0a3a79)
+![10](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/81f43f7b-34e4-4905-9395-828d986a9d3a)
+![11](https://github.com/heathbrew/Replace-Songwriters/assets/55629425/3be44663-3a55-4872-b2d9-c4451420f86a)
+
+
+
+
 ## Organization
 [WowDAO AI](https://wowdao.ai/)
 
