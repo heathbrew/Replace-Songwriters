@@ -18,7 +18,7 @@ CreativeSongCraft is an AI-powered web app that offers users the ability to crea
 
 ## Tech Stack Used
 - Backend Development: Python, Flask
-- AI Integration: Trained LSTM model for Lyrics generation and ChatGPT API for final rendering
+- AI and Model Integration: Trained LSTM model for Lyrics generation and ChatGPT API for final rendering
 - Lyrics Generation: Markov Chain Modeling
 - Sheet Music Generation: LilyPond Library
 - Web Development: HTML, CSS, JavaScript
