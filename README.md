@@ -52,4 +52,4 @@ A team of 5 talented individuals collaborated on this project.
 During the initial phase of development, the team observed a growing interest among aspiring songwriters and musicians to explore innovative ways to create music. There is a gap in the market for a comprehensive platform that combines AI-driven lyric generation and sheet music conversion.
 
 ## Project Link
-For more information and to access the CreativeSongCraft web app, please visit the [GitHub repository](https://github.com/heathbrew/Replace-Songwriters). Here, users can experience the innovative platform that seamlessly merges technology and artistic expression for music composition and sheet music generation..
+For more information and to access the CreativeSongCraft web app, please visit the [GitHub repository](https://github.com/heathbrew/Replace-Songwriters). Here, users can experience the innovative platform that seamlessly merges technology and artistic expression for music composition and sheet music generation.
